@@ -1,0 +1,69 @@
+
+/*bigbox is parent*/
+.bigBox{
+background-color: aquamarine;
+width: 80%;
+height: auto;
+display: grid;
+grid-template-columns:200px 1fr 1fr;/* column means width*/
+grid-template-rows: 100px 300px 100px;/*rows means height*/
+grid-gap: 20px;
+margin: auto;
+
+
+}
+.logo{
+    background-color: pink;
+    grid-column: 1/4;/* we span box to one long box--it have 3 box so we use 4--grid colume(span) from left to right*/
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.sideBar{
+    background-color: blue;
+    grid-row: 2/4;/* grid-row is top to bottom--start at 2 becasue if start at 1 it will include logo*/
+
+}
+.main{
+background-color: beige;
+grid-column: 2/4;
+}
+.footer{
+    background-color: chartreuse;
+    grid-column: 2/4;
+
+}
+
+@media screen and (max-width:600px) {
+    .bigBox{
+        background-color: aquamarine;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns:200px 1fr 1fr;/* column means width*/
+        grid-template-rows: 100px 200px 200px 100px;/*rows means height*/
+        grid-gap: 20px;
+        margin: auto;
+        
+        }
+
+
+    .sideBar{
+        grid-row: 2/3;/* grid-row is top to bottom--start at 2 becasue if start at 1 it will include logo*/
+        grid-column: 1/4;
+    
+    }
+
+    .main{
+      
+        grid-column: 1/4;
+        
+        }
+
+        .footer{
+          
+            grid-column: 1/4;
+        
+        }
+    
+}
